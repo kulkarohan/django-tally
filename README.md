@@ -55,12 +55,6 @@ USE_TZ = True
 ```
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -68,13 +62,14 @@ DATABASES = {
                         'options': '-c search_path=django'
                     },
         'NAME': 'postgres',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': 'database-spotifier.c5eevkz7wazj.us-east-2.rds.amazonaws.com',
+        'USER': '***',
+        'PASSWORD': '***',
+        'HOST': '***',
         'PORT': '5432',
     },
 }
 ```
+Migrate Django admin tables to database `django` schema.   
 
 
 
