@@ -20,6 +20,6 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^', include('apis.urls')), # REST APIs
+    url(r'^', include('example.urls')), # REST APIs
     url(r'^', include('yelp.urls'))  # REST APIs
 ]

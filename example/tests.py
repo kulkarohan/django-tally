@@ -3,7 +3,7 @@ from django.test import TestCase
 
 # Create your tests here.
 
-from .models import Bucketlist
+from .models import ExampleBucketlist
 
 class ModelTestCase(TestCase):
     """This class defines the test suite for the bucketlist model."""
@@ -11,13 +11,13 @@ class ModelTestCase(TestCase):
     def setUp(self):
         """Define the test client and other test variables."""
         self.bucketlist_name = "Write world class code"
-        self.bucketlist = Bucketlist(name=self.bucketlist_name)
+        self.bucketlist = ExampleBucketlist(name=self.bucketlist_name)
 
     def test_model_can_create_a_bucketlist(self):
         """Test the bucketlist model can create a bucketlist."""
-        old_count = Bucketlist.objects.count()
+        old_count = ExampleBucketlist.objects.count()
         self.bucketlist.save()
-        new_count = Bucketlist.objects.count()
+        new_count = ExampleBucketlist.objects.count()
         self.assertNotEqual(old_count, new_count)
 
 
@@ -44,7 +44,7 @@ class ViewTestCase(TestCase):
 
     def test_api_can_get_a_bucketlist(self):
         """Test the api can get a given bucketlist."""
-        bucketlist = Bucketlist.objects.get()
+        bucketlist = ExampleBucketlist.objects.get()
         response = self.client.get(
             reverse('details',
             kwargs={'pk': bucketlist.id}), format="json")
@@ -63,7 +63,7 @@ class ViewTestCase(TestCase):
 
     def test_api_can_delete_bucketlist(self):
         """Test the api can delete a bucketlist."""
-        bucketlist = Bucketlist.objects.get()
+        bucketlist = ExampleBucketlist.objects.get()
         response = self.client.delete(
             reverse('details', kwargs={'pk': bucketlist.id}),
             format='json',
