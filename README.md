@@ -163,6 +163,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',             # Add this line; other app names are not allowed
     'apis',                       # Add this line; you can use app names other than "apis" 
+    'yelp',                       # Add this app as well
 ]
 ```
 ```
@@ -194,5 +195,5 @@ So every app would have their own models without conflicting with other apps.
 
 
 ### Debug
-[Django “ValueError: source code string cannot contain null bytes”](https://stackoverflow.com/questions/52273840/django-valueerror-source-code-string-cannot-contain-null-bytes)  
+Issue: [Django “ValueError: source code string cannot contain null bytes”](https://stackoverflow.com/questions/52273840/django-valueerror-source-code-string-cannot-contain-null-bytes)  
 Solution: you can simply create a new .py file, copy and paste the `models.py` content to it, then replace the `models.py` file with it.    
