@@ -1,8 +1,15 @@
 # django-tally
 2019-01-06 This is a Django app, locally running on Windows 10.  
 
+### Reference  
 [Django Documentation](https://docs.djangoproject.com/en/3.0/)  
-[Deploying a Django Application to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html#w510aac13c37c15c13b7b2b3b3)    
+[Deploying a Django Application to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html#w510aac13c37c15c13b7b2b3b3)   
+
+### Frequently used commands
+```
+$ python manage.py runserver
+$ python -m django --version
+```  
 
 
 ### Activate virtual enviroment  
@@ -106,6 +113,26 @@ Running migrations:
   Applying auth.0011_update_proxy_permissions... OK
   Applying sessions.0001_initial... OK
 ```
+
+### Create admin user  
+PS D:\github\django-tally> 
+```
+$ python manage.py createsuperuser
+```
+```
+Username (leave blank to use 'guido'): admin
+Email address: admin@example.com
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: n
+Password:
+Password (again):
+Superuser created successfully.
+```
+T****_******  
 
 
 
