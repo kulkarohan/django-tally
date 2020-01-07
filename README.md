@@ -24,6 +24,7 @@ PS D:\github\django-tally>
 ```
 python manage.py runserver
 ```   
+Logs:  
 ```
 Watching for file changes with StatReloader
 Performing system checks...
@@ -80,6 +81,7 @@ PS D:\github\django-tally>
 ```
 python manage.py migrate
 ```
+Logs:  
 ```
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, sessions
