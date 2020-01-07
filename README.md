@@ -95,7 +95,7 @@ DATABASES = {
 }
 ```
 Migrate Django admin tables to database `django` schema.   
-Grant permissions to the user in database accordingly.   
+[Grant permissions](https://github.com/Nov05/yelp-dataset-challenge/blob/master/tallysql/grant_permissions.sql) to the user in database accordingly.   
 
 ### Migration   
 ```
