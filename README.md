@@ -1,19 +1,21 @@
 # django-tally
-2019-01-06 This is a Django app.   
+2019-01-06 This is a Django app, locally running on Windows 10.  
+
+[Django Documentation](https://docs.djangoproject.com/en/3.0/)  
 [Deploying a Django Application to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html#w510aac13c37c15c13b7b2b3b3)    
 
 
 ### Activate virtual enviroment  
 (base) PS D:\github\django-tally>     
 ```
-pipenv shell
+$ pipenv shell
 ```
 
 ### Create project  
 PS D:\github\django-tally>     
 ```
-cd C:\Users\guido\.virtualenvs\django-tally-QTYVOJb0\Scripts\
-python django-admin.py startproject tally D:\github\django-tally
+$ cd C:\Users\guido\.virtualenvs\django-tally-QTYVOJb0\Scripts\
+$ python django-admin.py startproject tally D:\github\django-tally
 ```
 project (app) name: tally  
 project created in directory: D:\github\django-tally   
@@ -22,9 +24,9 @@ project created in directory: D:\github\django-tally
 ### Run Django app    
 PS D:\github\django-tally>     
 ```
-python manage.py runserver
+$ python manage.py runserver
 ```   
-Logs:  
+Logs:     
 ```
 Watching for file changes with StatReloader
 Performing system checks...
@@ -75,13 +77,13 @@ Migrate Django admin tables to database `django` schema.
 
 ### Migration   
 ```
-cd d:/github/django-tally
+$ cd d:/github/django-tally
 ```
 PS D:\github\django-tally> 
 ```
-python manage.py migrate
+$ python manage.py migrate
 ```
-Logs:  
+Logs:    
 ```
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, sessions
