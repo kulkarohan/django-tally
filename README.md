@@ -12,8 +12,11 @@ Repo [flask-yelp-reviews](https://github.com/Nov05/flask-yelp-reviews)
 ### Testing URLs 
 http://127.0.0.1:8000/admin/  
 http://127.0.0.1:8000/aunt-jakes-new-york (by business alias)      
-http://127.0.0.1:8000/I2lgw_7DUnwD92ND4PN-Ow (by business ID)     
-http://127.0.0.1:8000/yelp/9759c0c0-b28a-44ff-b770-4cf303367a60 (by review UUID)    
+http://127.0.0.1:8000/I2lgw_7DUnwD92ND4PN-Ow (by business ID)   
+http://127.0.0.1:8000/DR22QPe3A52diajwPuooVA  
+http://127.0.0.1:8000/yelp/9759c0c0-b28a-44ff-b770-4cf303367a60 (by review UUID)  
+http://127.0.0.1:8000/bucketlists (create)
+http://127.0.0.1:8000/bucketlists/1 (get, put, delete)
 
 ### Frequently used commands
 ```
