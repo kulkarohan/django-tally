@@ -2,20 +2,29 @@
 2019-01-06 This is a Django app, locally running on Windows 10.  
 
 ### Reference  
-[Django Documentation](https://docs.djangoproject.com/en/3.0/)  
-[Deploying a Django Application to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html#w510aac13c37c15c13b7b2b3b3)   
+[Django Documentation](https://docs.djangoproject.com/en/3.0/)   
+[Django Message Framework](https://docs.djangoproject.com/en/3.0/ref/contrib/messages/)    
+[Deploying a Django Application to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html#w510aac13c37c15c13b7b2b3b3)  
+[Build a REST API with Django – A Test Driven Approach: Part 1](https://scotch.io/tutorials/build-a-rest-api-with-django-a-test-driven-approach-part-1)  
+
 
 ### Frequently used commands
+http://127.0.0.1:8000/admin/
+http://127.0.0.1:8000/yelp/DR22QPe3A52diajwPuooVA  
 ```
 $ python manage.py runserver
+$ python manage.py makemigrations  
+$ python manage.py migrate  
+$ python manage.py test
 $ python -m django --version
 ```  
-
 
 ### Activate virtual enviroment  
 (base) PS D:\github\django-tally>     
 ```
 $ pipenv shell
+$ pipenv install django
+$ pipenv install djangorestframework
 ```
 
 ### Create project  
@@ -24,7 +33,7 @@ PS D:\github\django-tally>
 $ cd C:\Users\guido\.virtualenvs\django-tally-QTYVOJb0\Scripts\
 $ python django-admin.py startproject tally D:\github\django-tally
 ```
-project (app) name: tally  
+project name: tally  
 project created in directory: D:\github\django-tally   
 
 
@@ -69,14 +78,17 @@ USE_TZ = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'OPTIONS': {
-                        'options': '-c search_path=django'
-                    },
         'NAME': 'postgres',
-        'USER': '***',
-        'PASSWORD': '***',
-        'HOST': '***',
+        'USER': 'tally_ds',
+        'PASSWORD': 'P@ssw0rd',
+        'HOST': 'database-spotifier.c5eevkz7wazj.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
+        'OPTIONS': {
+                        'options': '-c search_path=django,public'
+                    },        
+        'TEST': {
+            'ENGINE': 'django.db.backends.sqlite3',
+        },
     },
 }
 ```
@@ -120,7 +132,7 @@ PS D:\github\django-tally>
 $ python manage.py createsuperuser
 ```
 ```
-Username (leave blank to use 'guido'): admin
+Username (leave blank to use 'guido'): ***
 Email address: admin@example.com
 Password:
 Password (again):
@@ -132,7 +144,29 @@ Password:
 Password (again):
 Superuser created successfully.
 ```
-T****_******  
+a**** / T****_******  
+
+### Using Django REST Framework for APIs
+PS D:\github\django-tally>    
+```
+# D:\github\django-tally\tally\settings.py
+...
+# Application definition
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',             # Add this line; other app names are not allowed
+    'apis',                       # Add this line; you can use other app names than "apis" 
+]
+```
+```
+$ python manage.py startapp apis
+```  
+Follow this [tutorial](https://scotch.io/tutorials/build-a-rest-api-with-django-a-test-driven-approach-part-1).    
 
 
 

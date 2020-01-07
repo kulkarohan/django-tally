@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'apis',
 ]
 
 MIDDLEWARE = [
@@ -80,14 +82,18 @@ WSGI_APPLICATION = 'tally.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'OPTIONS': {
-                        'options': '-c search_path=django'
-                    },
         'NAME': 'postgres',
         'USER': 'tally_ds',
         'PASSWORD': 'P@ssw0rd',
         'HOST': 'database-spotifier.c5eevkz7wazj.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
+        'OPTIONS': {
+                        'options': '-c search_path=django,public'
+                    },        
+        'TEST': {
+            # 'NAME': 'test',
+            'ENGINE': 'django.db.backends.sqlite3',
+        },
     },
 }
 
