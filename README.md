@@ -6,6 +6,7 @@
 [Django Message Framework](https://docs.djangoproject.com/en/3.0/ref/contrib/messages/)    
 [Deploying a Django Application to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html#w510aac13c37c15c13b7b2b3b3)  
 [Build a REST API with Django – A Test Driven Approach: Part 1](https://scotch.io/tutorials/build-a-rest-api-with-django-a-test-driven-approach-part-1)  
+[List of Useful URL Patterns](https://simpleisbetterthancomplex.com/references/2016/10/10/url-patterns.html)   
 
 
 ### Frequently used commands
@@ -16,6 +17,7 @@ $ python manage.py runserver
 $ python manage.py makemigrations  
 $ python manage.py migrate  
 $ python manage.py test
+$ python manage.py inspectdb > models.py
 $ python -m django --version
 ```  
 
@@ -160,13 +162,37 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',             # Add this line; other app names are not allowed
-    'apis',                       # Add this line; you can use other app names than "apis" 
+    'apis',                       # Add this line; you can use app names other than "apis" 
 ]
 ```
 ```
 $ python manage.py startapp apis
 ```  
+E.g. regular expression match UUID as primary key `(?P<pk>[0-9a-f-]+)`:  
+```
+urlpatterns = {
+    url(r'^yelp/$', 
+        YelpYelpScrapingCreateView.as_view(), name="create"),
+    url(r'^yelp/(?P<pk>[0-9a-f-]+)/$',
+        YelpYelpScrapingDetailsView.as_view(), name="details"),
+}
+```
 Follow this [tutorial](https://scotch.io/tutorials/build-a-rest-api-with-django-a-test-driven-approach-part-1).    
 
 
+### Auto-generate data models from database tables
+```
+$ python manage.py inspectdb > models.py
+```
+After running this command, modify class names in the `models.py` file.     
+Add <AppName> to every class name. E.g.   
+For app "apis", change `class Bucketlist` -> `class ApisBucketlist`   
+For app "yelp", change `class Business` -> `class YelpBusiness`    
+Follow the instructions in the `models.py` file, make sure model definitions are correct.   
+Then move the `models.py` file to the corresponding app folder.    
+So every app would have their own models without conflicting with other apps.   
 
+
+### Debug
+[Django “ValueError: source code string cannot contain null bytes”](https://stackoverflow.com/questions/52273840/django-valueerror-source-code-string-cannot-contain-null-bytes)  
+Solution: you can simply create a new .py file, copy and paste the `models.py` content to it, then replace the `models.py` file with it.    

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'apis',
+    'yelp',
 ]
 
 MIDDLEWARE = [
@@ -88,10 +89,10 @@ DATABASES = {
         'HOST': 'database-spotifier.c5eevkz7wazj.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
         'OPTIONS': {
-                        'options': '-c search_path=django,public'
+                        'options': '-c search_path=django,tallyds'
                     },        
         'TEST': {
-            # 'NAME': 'test',
+            # 'NAME': 'test', # test database name
             'ENGINE': 'django.db.backends.sqlite3',
         },
     },

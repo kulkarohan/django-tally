@@ -6,7 +6,8 @@ from .views import CreateView
 from .views import DetailsView
 
 urlpatterns = {
-    url(r'^bucketlists/$', CreateView.as_view(), name="create"),
+    url(r'^bucketlists/$', 
+        CreateView.as_view(), name="create"),
     url(r'^bucketlists/(?P<pk>[0-9]+)/$',
         DetailsView.as_view(), name="details"),
 }
