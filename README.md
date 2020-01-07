@@ -7,11 +7,15 @@
 [Deploying a Django Application to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html#w510aac13c37c15c13b7b2b3b3)  
 [Build a REST API with Django – A Test Driven Approach: Part 1](https://scotch.io/tutorials/build-a-rest-api-with-django-a-test-driven-approach-part-1)  
 [List of Useful URL Patterns](https://simpleisbetterthancomplex.com/references/2016/10/10/url-patterns.html)   
+Repo [flask-yelp-reviews](https://github.com/Nov05/flask-yelp-reviews)    
 
+### Testing URLs 
+http://127.0.0.1:8000/admin/
+http://127.0.0.1:8000/aunt-jakes-new-york (by business alias)      
+http://127.0.0.1:8000/I2lgw_7DUnwD92ND4PN-Ow (by business ID)     
+http://127.0.0.1:8000/yelp/DR22QPe3A52diajwPuooVA    
 
 ### Frequently used commands
-http://127.0.0.1:8000/admin/
-http://127.0.0.1:8000/yelp/DR22QPe3A52diajwPuooVA  
 ```
 $ python manage.py runserver
 $ python manage.py makemigrations  
@@ -198,3 +202,10 @@ So every app would have their own models without conflicting with other apps.
 ### Debug
 Issue: [Django “ValueError: source code string cannot contain null bytes”](https://stackoverflow.com/questions/52273840/django-valueerror-source-code-string-cannot-contain-null-bytes)  
 Solution: you can simply create a new .py file, copy and paste the `models.py` content to it, then replace the `models.py` file with it.    
+
+
+### spaCy
+spaCy models   
+https://spacy.io/usage/models    
+Download spaCy model manually   
+https://github.com/explosion/spacy-models/releases   

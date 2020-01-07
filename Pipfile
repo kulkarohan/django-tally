@@ -9,6 +9,11 @@ verify_ssl = true
 django = "*"
 psycopg2-binary = "*"
 djangorestframework = "*"
+spacy = "*"
+lxml = "*"
+json = "*"
+scattertext = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
