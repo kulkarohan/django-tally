@@ -7,22 +7,20 @@ from rest_framework import generics
 from .models import YelpYelpScraping
 from .serializers import YelpYelpScrapingSerializer
 from tallylib.scraper import yelpScraper
-from tallylib.
+from tallylib.textrank import yelpTrendyPhrases
 
 import requests
 import json
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the Yelp review analytics app index page.")
-
-
-def getPosNegPhrases(request, business_id):
-    result = json.dumps(yelpScraper(business_id))
+def home(request, business_id):
+    result = "This is Yelp Analytics home page."
+    viztype = request.GET.get('viztype')
+    if viztype == '1':
+        result = "this is a line chart."
+    else:
+        result = json.dumps(yelpScraper(business_id))
     return HttpResponse(result)
-
-def getTrendyPhrases(request, business_id):
-    
 
 
 class YelpYelpScrapingCreateView(generics.ListCreateAPIView):
@@ -37,7 +35,6 @@ class YelpYelpScrapingCreateView(generics.ListCreateAPIView):
 
 class YelpYelpScrapingDetailsView(generics.RetrieveUpdateDestroyAPIView):
     """This class handles the http GET, PUT and DELETE requests."""
-
     queryset = YelpYelpScraping.objects.all()
     serializer_class = YelpYelpScrapingSerializer
 

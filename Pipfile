@@ -14,7 +14,7 @@ lxml = "*"
 scattertext = "*"
 requests = "*"
 pytextrank = "*"
-awsebcli = "==3.7.4"
+awsebcli = "*"
 
 [requires]
 python_version = "3.7"

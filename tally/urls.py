@@ -15,11 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import url, include
-
+from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^', include('example.urls')), # REST APIs
-    url(r'^yelp/', include('yelp.urls'))  # REST APIs
+    path('', include('example.urls')),
+    path('yelp/', include('yelp.urls'))
 ]

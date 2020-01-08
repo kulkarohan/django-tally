@@ -37,26 +37,26 @@ class YelpBusiness(models.Model):
         db_table = 'business'
 
 
-# class YelpReview(models.Model):
-#     uuid = models.UUIDField(primary_key=True)
-#     review_id = models.CharField(max_length=50, blank=True, null=True)
-#     business_id = models.CharField(max_length=50, blank=True, null=True)
-#     user_id = models.CharField(max_length=50, blank=True, null=True)
-#     stars = models.FloatField(blank=True, null=True)
-#     datetime = models.DateTimeField(blank=True, null=True)
-#     date = models.DateField(blank=True, null=True)
-#     time = models.TimeField(blank=True, null=True)
-#     text = models.CharField(max_length=5000, blank=True, null=True)
-#     timestamp = models.DateTimeField(blank=True, null=True)
-#     data_source = models.SmallIntegerField(blank=True, null=True)
+class YelpReview(models.Model):
+    uuid = models.UUIDField(primary_key=True)
+    review_id = models.CharField(max_length=50, blank=True, null=True)
+    business_id = models.CharField(max_length=50, blank=True, null=True)
+    user_id = models.CharField(max_length=50, blank=True, null=True)
+    stars = models.FloatField(blank=True, null=True)
+    datetime = models.DateTimeField(blank=True, null=True)
+    date = models.DateField(blank=True, null=True)
+    time = models.TimeField(blank=True, null=True)
+    text = models.CharField(max_length=5000, blank=True, null=True)
+    timestamp = models.DateTimeField(blank=True, null=True)
+    data_source = models.SmallIntegerField(blank=True, null=True)
 
-#     def __str__(self):
-#         """Return a human readable representation of the model instance."""
-#         return "{}".format(self.name)
+    def __str__(self):
+        """Return a human readable representation of the model instance."""
+        return "{}".format(self.name)
 
-#     class Meta:
-#         managed = False
-#         db_table = 'review'
+    class Meta:
+        managed = False
+        db_table = 'review'
 
 
 class YelpYelpScraping(models.Model):
