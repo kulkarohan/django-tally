@@ -8,15 +8,20 @@
 [Build a REST API with Django – A Test Driven Approach: Part 1](https://scotch.io/tutorials/build-a-rest-api-with-django-a-test-driven-approach-part-1)  
 [List of Useful URL Patterns](https://simpleisbetterthancomplex.com/references/2016/10/10/url-patterns.html)   
 Repo [flask-yelp-reviews](https://github.com/Nov05/flask-yelp-reviews)    
+Repo [](https://github.com/Lambda-School-Labs/tally-ai-ds/blob/b95c67d7f0989b49a5ab8b89d9e6884233622da3/ElasticBeanstalkDjango_v.0.2/ebdjango/yelp/urls.py)   
 
 ### Testing URLs 
-http://127.0.0.1:8000/admin/  
-http://127.0.0.1:8000/aunt-jakes-new-york (by business alias)      
-http://127.0.0.1:8000/I2lgw_7DUnwD92ND4PN-Ow (by business ID)   
-http://127.0.0.1:8000/DR22QPe3A52diajwPuooVA  
-http://127.0.0.1:8000/yelp/9759c0c0-b28a-44ff-b770-4cf303367a60 (by review UUID)  
+https://www.yelp.com/biz/aunt-jakes-new-york   
+http://127.0.0.1:8000/yelp/index
+http://127.0.0.1:8000/yelp/aunt-jakes-new-york (by business alias)      
+http://127.0.0.1:8000/yelp/I2lgw_7DUnwD92ND4PN-Ow (by business ID)   
+http://127.0.0.1:8000/yelp/DR22QPe3A52diajwPuooVA (by business ID)      
+http://127.0.0.1:8000/yelp/review/create (create review)      
+http://127.0.0.1:8000/yelp/review/9759c0c0-b28a-44ff-b770-4cf303367a60 (get, put, delete, by review UUID)    
+http://127.0.0.1:8000/admin        
 http://127.0.0.1:8000/bucketlists (create)
 http://127.0.0.1:8000/bucketlists/1 (get, put, delete)
+
 
 ### Frequently used commands
 ```

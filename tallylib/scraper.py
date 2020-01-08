@@ -5,7 +5,7 @@ import pandas as pd
 import spacy
 import scattertext as st
 
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("en_core_web_sm/en_core_web_sm-2.2.5")
 
 
 def yelpScraper(bid, from_isbn=False):
