@@ -13,11 +13,11 @@ from .views import YelpYelpScrapingDetailsView
 urlpatterns = {
     path('<slug:business_id>', getPosNegPhrases, name='profile'),
     url(r'^index/$', index, name='index'),
-    url(r'^review/create/$', 
+    url(r'^review/$', 
         YelpYelpScrapingCreateView.as_view(), name="create"),
     url(r'^review/(?P<pk>[0-9a-f-]+)/$',
         YelpYelpScrapingDetailsView.as_view(), name="details"),
-    # path('yelp/<uuid:uuid>',
+    # path('<uuid:uuid>',
     #      YelpYelpScrapingDetailsView.as_view(), name="details"),
 }
 
