@@ -8,7 +8,7 @@
 [Build a REST API with Django – A Test Driven Approach: Part 1](https://scotch.io/tutorials/build-a-rest-api-with-django-a-test-driven-approach-part-1)  
 [List of Useful URL Patterns](https://simpleisbetterthancomplex.com/references/2016/10/10/url-patterns.html)   
 Repo [flask-yelp-reviews](https://github.com/Nov05/flask-yelp-reviews)    
-Repo [](https://github.com/Lambda-School-Labs/tally-ai-ds/blob/b95c67d7f0989b49a5ab8b89d9e6884233622da3/ElasticBeanstalkDjango_v.0.2/ebdjango/yelp/urls.py)   
+Repo [Lily's Django](https://github.com/Lambda-School-Labs/tally-ai-ds/tree/b95c67d7f0989b49a5ab8b89d9e6884233622da3/ElasticBeanstalkDjango_v.0.2/ebdjango)    
 
 ### Testing URLs 
 https://www.yelp.com/biz/aunt-jakes-new-york   

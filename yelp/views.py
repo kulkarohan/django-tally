@@ -7,6 +7,7 @@ from rest_framework import generics
 from .models import YelpYelpScraping
 from .serializers import YelpYelpScrapingSerializer
 from tallylib.scraper import yelpScraper
+from tallylib.
 
 import requests
 import json
@@ -19,6 +20,9 @@ def index(request):
 def getPosNegPhrases(request, business_id):
     result = json.dumps(yelpScraper(business_id))
     return HttpResponse(result)
+
+def getTrendyPhrases(request, business_id):
+    
 
 
 class YelpYelpScrapingCreateView(generics.ListCreateAPIView):

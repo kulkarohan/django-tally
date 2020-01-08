@@ -14,6 +14,7 @@ lxml = "*"
 json = "*"
 scattertext = "*"
 requests = "*"
+pytextrank = "*"
 
 [requires]
 python_version = "3.7"
