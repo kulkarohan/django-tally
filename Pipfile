@@ -11,10 +11,10 @@ psycopg2-binary = "*"
 djangorestframework = "*"
 spacy = "*"
 lxml = "*"
-json = "*"
 scattertext = "*"
 requests = "*"
 pytextrank = "*"
+awsebcli = "==3.7.4"
 
 [requires]
 python_version = "3.7"
